@@ -9,10 +9,14 @@ buttons for score updates, saving, and deletion.
 
 Installations
 Python(3.8 or later)
-Download the latest version of python
+Download the latest version of Python from the official website
 https://www.python.org/downloads/
 
-To check if Python is installed properly or not:
+To check if Python is installed properly or not
+
+Open the command terminal and type the below command
+
+
 python --version
 
 
@@ -24,6 +28,8 @@ Tkinter
 Pre requisites:
 Make sure pip is already installed in your system
 Once it is done,open the cmd and type the below command
+
+
 pip install tk
 
 To check whether tkinter is properly installed or not:
