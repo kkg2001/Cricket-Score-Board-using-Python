@@ -1,4 +1,4 @@
-# Cricket-Score-Board-using-Python
+# Cricket Score Board using Python
 Cricket Score Board is a file structures project made using Python and Tkinter. It provides a user-friendly interface to track and manage cricket scores.The graphical interface allows users to interact with the system by clicking buttons and entering data. 
 
 The cricket score board comprises of batting scorecard and bowling scorecard which are stored 
