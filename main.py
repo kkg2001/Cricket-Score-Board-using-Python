@@ -100,8 +100,8 @@ def update_scores():
     bowl_dot=bowling_dot_balls_entry.get()
     bowl_maiden=bowling_maiden_entry.get()
 
-    score_board.insert(END,f"{bat_name}:{bat_runs}:{bat_balls}:{bat_four}:{bat_six}:{bat_dot}\n")
-    score_board.insert(END,f"{bowl_name}:{bowl_wickets}:{bowl_overs}:{bowl_runs}:{bowl_dot}:{bowl_maiden}\n")
+    score_board.insert(END,f"{bat_name},{bat_runs},{bat_balls},{bat_four},{bat_six},{bat_dot}\n")
+    score_board.insert(END,f"{bowl_name},{bowl_wickets},{bowl_overs},{bowl_runs},{bowl_dot},{bowl_maiden}\n")
     score_board.insert(END, "--------------------------------------------------------------------------------\n")
     #Batting
     batting_name_entry.delete(0,END)
