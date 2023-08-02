@@ -103,20 +103,6 @@ def update_scores():
     score_board.insert(END,f"{bat_name},{bat_runs},{bat_balls},{bat_four},{bat_six},{bat_dot}\n")
     score_board.insert(END,f"{bowl_name},{bowl_wickets},{bowl_overs},{bowl_runs},{bowl_dot},{bowl_maiden}\n")
     score_board.insert(END, "--------------------------------------------------------------------------------\n")
-    #Batting
-    batting_name_entry.delete(0,END)
-    batting_runs_entry.delete(0,END)
-    batting_balls_entry.delete(0,END)
-    batting_fours_entry.delete(0,END)
-    batting_sixes_entry.delete(0,END)
-    batting_dot_entry.delete(0,END)
-    #Bowling
-    bowling_name_entry.delete(0,END)
-    bowling_wickets_entry.delete(0,END)
-    bowling_overs_entry.delete(0,END)
-    bowling_runs_entry.delete(0,END)
-    bowling_dot_balls_entry.delete(0,END)
-    bowling_maiden_entry.delete(0,END)
 
 def save_scores():
     
@@ -126,12 +112,21 @@ def save_scores():
        messagebox.showinfo("Score Board", "Scores saved to file.")
 
 def delete_scores():
-    start_line=simpledialog.askinteger("Delete scores","Enter the line number to delete")
-    end_line=simpledialog.askinteger("Delete scores","Enter the ending line number to delete")
-
-    if start_line is not None and end_line is not None:
-        score_board.delete(f"{start_line}:{end_line+1}.0")
-
+    #Batting
+    batting_name_entry.delete(0,END)
+    batting_runs_entry.delete(0,END)
+    batting_balls_entry.delete(0,END)
+    batting_fours_entry.delete(0,END)
+    batting_sixes_entry.delete(0,END)
+    batting_dot_entry.delete(0,END)
+    
+    #Bowling
+    bowling_name_entry.delete(0,END)
+    bowling_wickets_entry.delete(0,END)
+    bowling_overs_entry.delete(0,END)
+    bowling_runs_entry.delete(0,END)
+    bowling_dot_balls_entry.delete(0,END)
+    bowling_maiden_entry.delete(0,END)
 
 Batting_text=Label(root,text="BATTING SCORECARD",bg="yellow",fg="black")
 Batting_text.grid(row=0,column=0,columnspan=4,padx=5,pady=5)
