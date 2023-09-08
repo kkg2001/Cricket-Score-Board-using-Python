@@ -5,6 +5,20 @@ import csv
 
 root = Tk()
 root.title("CRICKET SCORE BOARD")
+
+def callback(input):
+    if input.isdigit():
+        print(input)
+        return True
+                        
+    elif input is "":
+        print(input)
+        return True
+
+    else:
+        print(input)
+        return False
+
 #Batting
 batting_name=Label(root, text="Batsman Name",bg="blue",fg="white")
 batting_name.grid(row=1,column=0,padx=5,pady=5)
@@ -16,30 +30,35 @@ batting_runs=Label(root,text="Runs scored",bg="blue",fg="white")
 batting_runs.grid(row=2,column=0,padx=5,pady=5)
 
 batting_runs_entry=Entry(root,bg="light blue")
+batting_runs_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 batting_runs_entry.grid(row=2,column=1,padx=5,pady=5)
 
 batting_balls=Label(root,text="Balls faced",bg="blue",fg="white")
 batting_balls.grid(row=3,column=0,padx=5,pady=5)
 
 batting_balls_entry=Entry(root,bg="light blue")
+batting_balls_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 batting_balls_entry.grid(row=3,column=1,padx=5,pady=5)
 
 batting_fours=Label(root,text="4s",bg="blue",fg="white")
 batting_fours.grid(row=4,column=0,padx=5,pady=5)
 
 batting_fours_entry=Entry(root,bg="light blue")
+batting_fours_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 batting_fours_entry.grid(row=4,column=1,padx=5,pady=5)
 
 batting_sixes=Label(root,text="6s",bg="blue",fg="white")
 batting_sixes.grid(row=5,column=0,padx=5,pady=5)
 
 batting_sixes_entry=Entry(root,bg="light blue")
+batting_sixes_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 batting_sixes_entry.grid(row=5,column=1,padx=5,pady=5)
 
 batting_dot=Label(root,text="Dot balls",bg="blue",fg="white")
 batting_dot.grid(row=6,column=0,padx=5,pady=5)
 
 batting_dot_entry=Entry(root,bg="light blue")
+batting_dot_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 batting_dot_entry.grid(row=6,column=1,padx=5,pady=5)
 
 #Bowling
@@ -54,30 +73,35 @@ bowling_wickets=Label(root,text="Wickets",bg="green",fg="white")
 bowling_wickets.grid(row=9,column=0,padx=5,pady=5)
 
 bowling_wickets_entry=Entry(root,bg="light green")
+bowling_wickets_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 bowling_wickets_entry.grid(row=9,column=1,padx=5,pady=5)
 
 bowling_overs=Label(root,text="Overs",bg="green",fg="white")
 bowling_overs.grid(row=10,column=0,padx=5,pady=5)
 
 bowling_overs_entry=Entry(root,bg="light green")
+bowling_overs_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 bowling_overs_entry.grid(row=10,column=1,padx=5,pady=5)
 
 bowling_runs=Label(root,text="Runs conceded",bg="green",fg="white")
 bowling_runs.grid(row=11,column=0,padx=5,pady=5)
 
 bowling_runs_entry=Entry(root,bg="light green")
+bowling_runs_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 bowling_runs_entry.grid(row=11,column=1,padx=5,pady=5)
 
 bowling_dot_balls=Label(root,text="Economy",bg="green",fg="white")
 bowling_dot_balls.grid(row=12,column=0,padx=5,pady=5)
 
 bowling_dot_balls_entry=Entry(root,bg="light green")
+bowling_dot_balls_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 bowling_dot_balls_entry.grid(row=12,column=1,padx=5,pady=5)
 
 bowling_maiden=Label(root,text="Maiden Overs",bg="green",fg="white")
 bowling_maiden.grid(row=13,column=0,padx=5,pady=5)
 
 bowling_maiden_entry=Entry(root,bg="light green")
+bowling_maiden_entry.config(validate="key",validatecommand=(root.register(callback),'%P'))
 bowling_maiden_entry.grid(row=13,column=1,padx=5,pady=5)
 
 score_board = Text(root, height=22, width=40,bg="light yellow")
